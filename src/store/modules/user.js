@@ -5,13 +5,17 @@ import { request } from '@/utils';
 const userStore = createSlice({
   name: 'user',
   // 数据初始状态
+  // 优先从 localStorage 中读取 token
   initialState: {
-    token: ''
+    token: localStorage.getItem('token_key') || ''
   },
   // 同步修改方法
-  reducers: {
+  // 保存 token 数据
+  reducers: { 
     setToken(state, action) {
       state.token = action.payload;
+      // localStorage 本地持久化存储 token
+      localStorage.setItem('token_key', action.payload);
     }
   }
 });
