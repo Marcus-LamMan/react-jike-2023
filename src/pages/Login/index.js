@@ -3,7 +3,7 @@ import { Card, Form, Input, Button } from 'antd'
 import logo from '@/assets/logo.png'
 
 const Login = () => {
-    const onFinish = (values) => {
+    const onFinish = (values) => { // 表单提交且数据验证成功后回调
         console.log(values);
     }
     return (

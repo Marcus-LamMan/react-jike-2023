@@ -1,6 +1,13 @@
 # react-jike-2023
 Playground for https://www.bilibili.com/video/BV13fCfBFEDX
 
+## Dependencies Used
+react-router-dom
+sass
+antd
+craco
+axios
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
