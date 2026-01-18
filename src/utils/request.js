@@ -6,7 +6,7 @@ import axios from 'axios';
 // 3. 请求拦截器配置 / 响应拦截器配置
 
 const request = axios.create({
-    baseURL: 'https://geek.ithemia.net/v1_0', // 根域名,项目间修改
+    baseURL: 'http://geek.itheima.net/v1_0', // 根域名,项目间修改
     timeout: 5000,
 });
 

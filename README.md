@@ -2,11 +2,18 @@
 Playground for https://www.bilibili.com/video/BV13fCfBFEDX
 
 ## Dependencies Used
-react-router-dom
-sass
-antd
-craco
-axios
+| 类别 | 包 | 版本 | 用途与说明 |
+| :--- | :--- | :--- | :--- |
+| **核心框架** | `react` | ^19.2.3 | React 核心库 |
+| **路由** | `react-router-dom` | ^7.12.0 | React Router 路由管理 |
+| **状态管理** | `@reduxjs/toolkit` | ^2.11.2 | Redux 官方标准工具集 (RTK) |
+| **状态管理** | `react-redux` | ^9.2.0 |  连接 Redux Store 与 React 组件 |
+| **UI 组件库** | `antd` | ^6.2.0 | Ant Design 组件库 |
+| **样式处理** | `sass` | ^1.97.2 | 编译 `.scss` / `.sass` 文件 |
+| **HTTP客户端** | `axios` | ^1.13.2 | 处理 HTTP 请求 |
+| **构建配置** | `@craco/craco` | ^7.1.0 | CRA 配置工具 |
+
+npm i react-redux @reduxjs/toolkit
 
 # Getting Started with Create React App
 
