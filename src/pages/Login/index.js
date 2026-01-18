@@ -13,7 +13,7 @@ const Login = () => {
         // 触发异步 action fetchLogin 完成登录
         await dispatch(fetchLogin(values)) // 注意：这里配合async 等登录完成后再跳转页面
         // 1. 跳转首页
-         navigate('/')
+        navigate('/')
         // 2. 提示用户登录成功
         message.success('登录成功')
     }

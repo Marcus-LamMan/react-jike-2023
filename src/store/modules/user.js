@@ -1,21 +1,24 @@
 // 用户相关状态管理模块
 import { createSlice } from '@reduxjs/toolkit';
 import { request } from '@/utils';
+import { setToken as _setToken, getToken } from '@/utils';
 
 const userStore = createSlice({
   name: 'user',
   // 数据初始状态
   // 优先从 localStorage 中读取 token
   initialState: {
-    token: localStorage.getItem('token_key') || ''
+    // token: localStorage.getItem('token_key') || ''
+    token: getToken() || ''
   },
   // 同步修改方法
   // 保存 token 数据
-  reducers: { 
+  reducers: {
     setToken(state, action) {
       state.token = action.payload;
       // localStorage 本地持久化存储 token
-      localStorage.setItem('token_key', action.payload);
+      // localStorage.setItem('token_key', action.payload);
+      _setToken(action.payload);
     }
   }
 });
@@ -30,12 +33,12 @@ const userReducer = userStore.reducer;
 const fetchLogin = (loginForm) => {
   return async (dispatch) => {
     // 1. 发送异步请求
-    const res =  await request.post('/authorizations', loginForm)
+    const res = await request.post('/authorizations', loginForm)
     // 2. 提交同步action进行token存入
-    dispatch(setToken(res.data.token)) ;
+    dispatch(setToken(res.data.token));
   }
 };
 
-export { fetchLogin, setToken }; 
+export { fetchLogin, setToken };
 
 export default userReducer;
